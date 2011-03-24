@@ -20,6 +20,7 @@ var NONE        = 4,
     EATEN_PAUSE = 9,
     DYING       = 10,
     Pacman      = {};
+    storage     = widget.preferences;
 
 Pacman.FPS = 30;
 
@@ -810,7 +811,7 @@ var PACMAN = (function () {
     }
 
     function soundDisabled() {
-        return localStorage["soundDisabled"] === "true";
+        return storage["soundDisabled"] === "true";
     };
     
     function startLevel() {        
@@ -837,7 +838,7 @@ var PACMAN = (function () {
             startNewGame();
         } else if (e.keyCode === KEY.S) {
             audio.disableSound();
-            localStorage["soundDisabled"] = !soundDisabled();
+            storage["soundDisabled"] = !soundDisabled();
         } else if (e.keyCode === KEY.P && state === PAUSE) {
             audio.resume();
             map.draw(ctx);
