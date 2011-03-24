@@ -1,0 +1,12 @@
+<widget xmlns="http://www.w3.org/ns/widgets"
+ 		id="https://github.com/daleharvey/pacman"
+        width="350"
+        height="470"
+        >
+  <name>HTML5 Pacman</name>
+  <description>Pacman</description>
+  <author>Dale Harvey</author>
+</widget>
+
+
+
